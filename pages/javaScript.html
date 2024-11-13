@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <header>
+        <h1>Apostila Web - Fundamentos de Desenvolvimento</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Introdução</a></li>
+                <li><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="javaScript.html">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="javascript">
+            <h2>JavaScript - Linguagem de Programação para Web</h2>
+            <p>JavaScript é uma linguagem que permite adicionar interatividade às páginas web. Com JavaScript, você pode criar efeitos dinâmicos, validar formulários e muito mais.</p>
+            <button id="saudacao">Clique aqui para uma saudação!</button>
+            <h3>Exemplo de Código JavaScript</h3>
+            <p>JavaScript permite adicionar interatividade às páginas web. O exemplo a seguir demonstra como exibir uma saudação ao clicar em um botão.</p>
+            <pre>
+                document.addEventListener('DOMContentLoaded', () => {
+   
+                    const button = document.getElementById('saudacao');
+                
+                    if (button) {
+                        button.addEventListener('click', () => {
+                            alert('Bem-vindo à nossa apostila web!');
+                        });
+                    }
+                });
+                
+            </pre>
+            <p>Este código utiliza um evento chamado `DOMContentLoaded`, que garante que o script será executado somente após todo o HTML ter sido carregado.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 - Apostila Web</p>
+    </footer>
+
+    <script src="../script/index.js"></script>
+</body>
+</html>
