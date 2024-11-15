@@ -5,7 +5,7 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Define a altura mínima de um elemento (altura da área visível da tela) */
+    min-height: 100vh;
 }
 
 header {
@@ -49,7 +49,7 @@ section {
     margin-bottom: 20px;
 }
 
-#saudacao {
+button {
     cursor: pointer;
     color: #f7f8f9;
     background-color: #0b4279;
@@ -60,6 +60,7 @@ section {
     display: block; 
 }
 
+
 footer {
     background-color: #1f2933;
     color: #fff;
@@ -67,3 +68,149 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
+#map {
+  height: 500px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+    /* Contêiner de perfis */
+    #profilesContainer {
+      margin-top: 50px;
+      display: flex;
+      gap: 20px;
+      margin-right:50px ;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Estilos do perfil */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s ease forwards;
+      transition: transform 0.3s;
+    }
+
+    /* Animação de entrada */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Estilos do avatar */
+    .profile img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      transition: transform 0.3s;
+    }
+
+    /* Hover no avatar */
+    .profile:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Nome com link */
+    .profile a {
+      margin-top: 10px;
+      color: #0366d6;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Hover no nome */
+    .profile a:hover {
+      text-decoration: underline;
+    }
+
+    
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+  }
+  
+  form label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form select,
+  form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+      font-size: 16px; /* Fonte consistente */
+  }
+  
+  form textarea {
+      resize: none; /* Remove redimensionamento */
+  }
+  
+  form button[type="submit"] {
+      width: 100%; /* Botão ocupa a largura do formulário */
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  }
+  
+  form button[type="submit"]:hover {
+      background-color: #45a049;
+  }
+  
+  .error {
+      color: #d9534f;
+      font-size: 14px;
+      margin-bottom: 10px; /* Adiciona espaçamento abaixo das mensagens de erro */
+  }
+  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
