@@ -75,3 +75,65 @@ async function fetchAPOD() {
 		apodContainer.innerHTML = '<p>Erro ao carregar a APOD.</p>';
 	}
 }
+
+function validateForm() {
+	// Obter os campos do formulário
+	const nome = document.getElementById("nome").value.trim();
+	const email = document.getElementById("email").value.trim();
+	const assunto = document.getElementById("assunto").value;
+	const mensagem = document.getElementById("mensagem").value.trim();
+
+	// Elementos de erro
+	const errorNome = document.getElementById("errorNome");
+	const errorEmail = document.getElementById("errorEmail");
+	const errorAssunto = document.getElementById("errorAssunto");
+	const errorMensagem = document.getElementById("errorMensagem");
+
+	// Limpar mensagens de erro anteriores
+	errorNome.textContent = "";
+	errorEmail.textContent = "";
+	errorAssunto.textContent = "";
+	errorMensagem.textContent = "";
+
+	// Flag para rastrear erros
+	let isValid = true;
+
+	// Validação do nome
+	if (!nome) {
+			errorNome.textContent = "O nome é obrigatório.";
+			isValid = false;
+	}
+
+	// Validação do email
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	if (!email) {
+			errorEmail.textContent = "O email é obrigatório.";
+			isValid = false;
+	} else if (!emailRegex.test(email)) {
+			errorEmail.textContent = "Digite um email válido.";
+			isValid = false;
+	}
+
+	// Validação do assunto
+	if (!assunto) {
+			errorAssunto.textContent = "Selecione um assunto.";
+			isValid = false;
+	}
+
+	// Validação da mensagem
+	if (!mensagem) {
+			errorMensagem.textContent = "A mensagem é obrigatória.";
+			isValid = false;
+	}
+
+	// Mostrar alert de acordo com a validação
+	if (isValid) {
+			alert("Formulário enviado com sucesso!");
+	} else {
+			alert("Por favor, corrija os erros antes de enviar o formulário.");
+	}
+
+	// Retornar false para impedir o envio se houver erros
+	return isValid;
+}
+
