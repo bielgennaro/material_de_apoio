@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
     <link rel="stylesheet" href="../styles/index.css">
 </head>
+
 <body>
     <header>
         <h1>Apostila Web - Fundamentos de Desenvolvimento</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Introdução</a></li>
+                <li><a href="../index.html">Introdução</a></li>
                 <li><a href="html.html">HTML</a></li>
                 <li><a href="css.html">CSS</a></li>
                 <li><a href="javaScript.html">JavaScript</a></li>
@@ -21,26 +23,83 @@
     <main>
         <section id="css">
             <h2>CSS - Folhas de Estilo em Cascata</h2>
-            <p>CSS (Cascading Style Sheets) é usado para estilizar páginas HTML, definindo cores, fontes, layouts e muito mais.</p>
+            <p>CSS (Cascading Style Sheets) é usado para estilizar páginas HTML, definindo cores, fontes, layouts e
+                muito mais.</p>
+
             <h3>Exemplo de CSS</h3>
             <p>O exemplo abaixo mostra como estilizar o corpo da página e o cabeçalho:</p>
             <pre>
-/* Estilizando o corpo da página */
-body {
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove padding padrão */
-}
+                /* Estilizando o corpo da página */
+                body {
+                    font-family: Arial, sans-serif; /* Define a fonte padrão */
+                    margin: 0; /* Remove margens padrão */
+                    padding: 0; /* Remove padding padrão */
+                }
 
-/* Estilizando o cabeçalho */
-header {
-    background-color: #333; /* Cor de fundo escura */
-    color: #fff; /* Cor do texto branca */
-    padding: 10px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-}
+                /* Estilizando o cabeçalho */
+                header {
+                    background-color: #333; /* Cor de fundo escura */
+                    color: #fff; /* Cor do texto branca */
+                    padding: 10px; /* Espaçamento interno */
+                    text-align: center; /* Centraliza o texto */
+                }
             </pre>
-            <p>No exemplo acima, aplicamos um fundo escuro no cabeçalho com texto branco e removemos margens e padding do corpo da página para ajustar o layout.</p>
+            <p>No exemplo acima, aplicamos um fundo escuro no cabeçalho com texto branco e removemos margens e padding
+                do corpo da página para ajustar o layout.</p>
+
+            <h3>Exemplo de Media Query</h3>
+            <p>O exemplo abaixo altera o estilo do cabeçalho em telas menores:</p>
+            <pre>
+                /* Media Query para telas menores */
+                @media (max-width: 600px) {
+                    header {
+                        font-size: 14px; /* Reduz o tamanho da fonte */
+                        padding: 5px; /* Diminui o espaçamento interno */
+                    }
+                }
+            </pre>
+            <p>Esse código ajusta o tamanho do texto e o espaçamento do cabeçalho para telas pequenas, melhorando a
+                responsividade.</p>
+
+            <h3>Exemplo de Flexbox</h3>
+            <p>O exemplo abaixo demonstra o uso do Flexbox para criar um layout com elementos centralizados:</p>
+            <pre>
+                /* Layout com Flexbox */
+                .container {
+                    display: flex; /* Ativa o modo flexbox */
+                    justify-content: center; /* Centraliza os itens horizontalmente */
+                    align-items: center; /* Centraliza os itens verticalmente */
+                    height: 100vh; /* Altura total da viewport */
+                }
+
+                .item {
+                    background-color: #4caf50; /* Cor de fundo do item */
+                    padding: 20px; /* Espaçamento interno */
+                    color: white; /* Cor do texto */
+                }
+            </pre>
+            <p>No exemplo acima, uma <code>div</code> com classe <code>container</code> é usada para centralizar um item
+                na tela.</p>
+
+            <h3>Exemplo de Grid Layout</h3>
+            <p>O exemplo abaixo cria um layout de grade com três colunas:</p>
+            <pre>
+                /* Layout com Grid */
+                .grid-container {
+                    display: grid; /* Ativa o Grid Layout */
+                    grid-template-columns: repeat(3, 1fr); /* Três colunas de tamanhos iguais */
+                    gap: 10px; /* Espaçamento entre os itens */
+                }
+
+                .grid-item {
+                    background-color: #2196f3; /* Cor de fundo do item */
+                    color: white; /* Cor do texto */
+                    padding: 20px; /* Espaçamento interno */
+                    text-align: center; /* Centraliza o texto */
+                }
+            </pre>
+            <p>Esse exemplo cria uma grade com três colunas igualmente espaçadas, usando a propriedade
+                <code>grid-template-columns</code>.</p>
         </section>
     </main>
     <footer>
@@ -49,4 +108,5 @@ header {
 
     <script src="../script/index.js"></script>
 </body>
+
 </html>

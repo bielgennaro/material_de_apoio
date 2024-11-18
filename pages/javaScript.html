@@ -11,7 +11,7 @@
         <h1>Apostila Web - Fundamentos de Desenvolvimento</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Introdução</a></li>
+                <li><a href="../index.html">Introdução</a></li>
                 <li><a href="html.html">HTML</a></li>
                 <li><a href="css.html">CSS</a></li>
                 <li><a href="javaScript.html">JavaScript</a></li>
@@ -40,11 +40,56 @@
             </pre>
             <p>Este código utiliza um evento chamado `DOMContentLoaded`, que garante que o script será executado somente após todo o HTML ter sido carregado.</p>
         </section>
+        
+        <section id="http-methods">
+            <h2>Métodos HTTP - Interação com APIs</h2>
+            <p>Os métodos HTTP são utilizados para realizar operações de envio e recebimento de dados entre o navegador e o servidor. Os principais métodos são:</p>
+            <ul>
+                <li><strong>GET:</strong> Solicita dados de um servidor sem alterar o estado do recurso. Usado para carregar informações, como ao acessar uma página.</li>
+                <li><strong>POST:</strong> Envia dados ao servidor para criar um novo recurso. Frequentemente utilizado em formulários para enviar informações de cadastro, por exemplo.</li>
+                <li><strong>PUT:</strong> Atualiza dados já existentes no servidor. É utilizado para modificar recursos de forma completa, enviando os dados atualizados no corpo da requisição.</li>
+                <li><strong>DELETE:</strong> Remove dados do servidor. Esse método é restrito e precisa ser usado com cuidado para evitar exclusões acidentais.</li>
+            </ul>
+            <p>Esses métodos são essenciais para a comunicação entre cliente e servidor, principalmente em aplicações web que consomem APIs.</p>
+        </section>
+
+        <section id="http-example">
+            <h2>Exemplo de Requisição HTTP com JavaScript</h2>
+            <p>Para realizar requisições HTTP em JavaScript, você pode utilizar a API Fetch, que permite enviar e receber dados de servidores remotos. O exemplo a seguir demonstra como fazer uma requisição GET para a API do GitHub:</p>
+            <pre>
+                document.addEventListener('DOMContentLoaded', () => {
+   
+                    fetch('https://api.github.com/users/octocat')
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('Erro ao carregar dados:', error);
+                        });
+                });
+            </pre>
+            <p>Este código utiliza o método `fetch` para realizar uma requisição GET à API do GitHub, que retorna informações sobre o usuário `octocat`. O resultado é tratado com as funções `then` e `catch`, que lidam com os dados recebidos e possíveis erros na requisição.</p>
+        </section>
+
+        <section id="list-users">
+            <h2>Exemplo prático</h2>
+            <p>Aproveitando o exemplo acima, decidimos nos apresentar de uma forma dinamica! Utilizando nossos perfis para exemplificar um método <strong>GET</strong>.</p>
+            <button id="showProfilesButton">Mostrar Perfis</button>
+            <div id="profilesContainer"></div>
+        </section>
+
+        <section>
+            <h2>Foto Astronômica do Dia</h2>
+    <button onclick="fetchAPOD()">Mostrar APOD</button>
+    <div id="apodContainer"></div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 - Apostila Web</p>
     </footer>
 
     <script src="../script/index.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>

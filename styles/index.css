@@ -5,7 +5,7 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Define a altura mínima de um elemento (altura da área visível da tela) */
+    min-height: 100vh;
 }
 
 header {
@@ -36,7 +36,7 @@ main {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    flex-grow: 1 /* faz com que o elemento expanda para preencher o espaço restante entre o cabeçalho e o rodapé */
+    flex-grow: 1;
 }
 
 pre {
@@ -49,15 +49,15 @@ section {
     margin-bottom: 20px;
 }
 
-#saudacao {
+button {
     cursor: pointer;
     color: #f7f8f9;
     background-color: #0b4279;
     border-color: #0b4279;
     border-radius: 1.5rem;
     height: 2.5rem;
-    margin: 0 auto; 
-    display: block; 
+    margin: 0 auto;
+    display: block;
 }
 
 footer {
@@ -66,4 +66,228 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#profilesContainer {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    margin-right: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+    transition: transform 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s;
+}
+
+.profile:hover img {
+    transform: scale(1.1);
+}
+
+.profile a {
+    margin-top: 10px;
+    color: #0366d6;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: none;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: #d9534f;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        max-width: 1200px;
+    }
+
+    header nav ul {
+        gap: 25px;
+    }
+
+    button {
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+
+    #map {
+        height: 600px;
+    }
+}
+
+@media (max-width: 1024px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #profilesContainer {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+
+    button {
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    #map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form select,
+    form textarea {
+        font-size: 14px;
+    }
+
+    table th,
+    table td {
+        font-size: 12px;
+    }
+
+    button {
+        height: 2rem;
+        font-size: 0.9rem;
+    }
+
+    #map {
+        height: 300px;
+    }
 }

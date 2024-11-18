@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
     <link rel="stylesheet" href="../styles/index.css">
 </head>
+
 <body>
     <header>
         <h1>Apostila Web - Fundamentos de Desenvolvimento</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Introdução</a></li>
+                <li><a href="../index.html">Introdução</a></li>
                 <li><a href="html.html">HTML</a></li>
                 <li><a href="css.html">CSS</a></li>
                 <li><a href="javaScript.html">JavaScript</a></li>
@@ -19,49 +21,117 @@
         </nav>
     </header>
     <main>
-    <section id="html">
-        <h2>HTML - Linguagem de Marcação de Hipertexto</h2>
-        <ul>
-            <li> (Hypertext Markup Language) é a linguagem padrão para criação de páginas na web.</li> Isto significa que é um código utilizado para descrever a
-            estrutura de um documento, mas não é a verdadeira
-            apresentação dele.</li>
-            <li> O HTML diz ao navegador, tudo sobre o conteúdo recebido, e
-            a estrutura da página;</li>
-            <li>O HTML define cabeçalhos, parágrafos, listas, tabelas entre
-            muitos outros elementos, por meio de marcas (tags).</li>
-        </ul>
-        <p>A seguir, veremos a estrutura básica de um documento HTML:</p>
-        
-        <h3>Estrutura básica de um documento HTML</h3>
-        <p>O exemplo abaixo mostra a estrutura básica de um documento HTML com suas principais tags:</p>
+        <section id="html">
+            <h2>HTML - Linguagem de Marcação de Hipertexto</h2>
+            <ul>
+                <li> (Hypertext Markup Language) é a linguagem padrão para criação de páginas na web.</li> Isto
+                significa que é um código utilizado para descrever a
+                estrutura de um documento, mas não é a verdadeira
+                apresentação dele.</li>
+                <li> O HTML diz ao navegador, tudo sobre o conteúdo recebido, e
+                    a estrutura da página;</li>
+                <li>O HTML define cabeçalhos, parágrafos, listas, tabelas entre
+                    muitos outros elementos, por meio de marcas (tags).</li>
+            </ul>
+            <p>A seguir, veremos a estrutura básica de um documento HTML:</p>
+
+            <h3>Estrutura básica de um documento HTML</h3>
+            <p>O exemplo abaixo mostra a estrutura básica de um documento HTML com suas principais tags:</p>
+            <pre>
+                &lt;!DOCTYPE html&gt; /* Declara que o documento está utilizando HTML5 */
+                &lt;html lang="pt-br"&gt; /* Tag raiz do documento HTML, com o idioma definido */
+                &lt;head&gt; /* Cabeçalho do documento */
+                    &lt;meta charset="UTF-8"&gt; /* Define a codificação de caracteres */
+                    &lt;title&gt;Título da Página&lt;/title&gt; /* Título exibido na aba do navegador */
+                &lt;/head&gt;
+                &lt;body&gt; /* Corpo do documento, onde o conteúdo é exibido */
+                    &lt;h1&gt;Cabeçalho Principal&lt;/h1&gt; /* Cabeçalho ou título principal */
+                    &lt;p&gt;Parágrafo de texto.&lt;/p&gt; /* Texto em formato de parágrafo */
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
+            <p>Neste exemplo, a tag <code>&lt;html&gt;</code> contém todo o conteúdo do documento. O
+                <code>&lt;head&gt;</code> define metadados e informações sobre o documento, enquanto o
+                <code>&lt;body&gt;</code> contém o conteúdo visível na página.</p>
+
+            <h3>Listas</h3>
+            <p>HTML permite criar listas ordenadas e desordenadas. Veja os exemplos:</p>
+            <p><strong>Lista desordenada (marcada com pontos):</strong></p>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+            <p><strong>Lista ordenada (numerada):</strong></p>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ol>
+        </section>
+
+        <h3>Imagens</h3>
+        <p>Imagens são importantes para enriquecer o conteúdo visualmente e ilustrar informações. Para adicionar uma
+            imagem, usamos a tag <code>&lt;img&gt;</code>:</p>
         <pre>
-&lt;!DOCTYPE html&gt; /* Declara que o documento está utilizando HTML5 */
-&lt;html lang="pt-br"&gt; /* Tag raiz do documento HTML, com o idioma definido */
-&lt;head&gt; /* Cabeçalho do documento */
-    &lt;meta charset="UTF-8"&gt; /* Define a codificação de caracteres */
-    &lt;title&gt;Título da Página&lt;/title&gt; /* Título exibido na aba do navegador */
-&lt;/head&gt;
-&lt;body&gt; /* Corpo do documento, onde o conteúdo é exibido */
-    &lt;h1&gt;Cabeçalho Principal&lt;/h1&gt; /* Cabeçalho ou título principal */
-    &lt;p&gt;Parágrafo de texto.&lt;/p&gt; /* Texto em formato de parágrafo */
-&lt;/body&gt;
-&lt;/html&gt;
+            &lt;img src="caminho-da-imagem.jpg" alt="Descrição da imagem" width="300" height="200"&gt;
         </pre>
-        <p>Neste exemplo, a tag <code>&lt;html&gt;</code> contém todo o conteúdo do documento. O <code>&lt;head&gt;</code> define metadados e informações sobre o documento, enquanto o <code>&lt;body&gt;</code> contém o conteúdo visível na página.</p>
-        
-        <h3>Listas</h3>
-        <p>HTML permite criar listas ordenadas e desordenadas. Veja os exemplos:</p>
-        <p><strong>Lista desordenada (marcada com pontos):</strong></p>
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-        </ul>
-        <p><strong>Lista ordenada (numerada):</strong></p>
-        <ol>
-            <li>Item 1</li>
-            <li>Item 2</li>
-        </ol>
-    </section>
+        <p>O atributo <code>src</code> indica o caminho da imagem, e o <code>alt</code> fornece uma descrição
+            alternativa, essencial para acessibilidade.</p>
+
+        <h3>Tabelas</h3>
+        <p>Tabelas organizam dados em linhas e colunas. Exemplo de uma tabela simples:</p>
+        <table border="1">
+            <caption>Tabela de Exemplos</caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ana</td>
+                    <td>25</td>
+                    <td>São Paulo</td>
+                </tr>
+                <tr>
+                    <td>Bruno</td>
+                    <td>30</td>
+                    <td>Rio de Janeiro</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>O exemplo acima cria uma tabela com cabeçalho e duas linhas de dados. A tag <code>&lt;caption&gt;</code>
+            fornece um título para a tabela.</p>
+
+        <section id="html">
+            <h2>Formulários</h2>
+            <p>Formulários coletam dados dos usuários. Abaixo está um exemplo de formulário de contato:</p>
+            <form id="contactForm" action="*" method="post" onsubmit="return validateForm()">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <span id="errorNome" class="error"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="errorEmail" class="error"></span>
+
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione um assunto</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                </select>
+                <span id="errorAssunto" class="error"></span>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <span id="errorMensagem" class="error"></span>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 - Apostila Web</p>
@@ -69,4 +139,5 @@
 
     <script src="../script/index.js"></script>
 </body>
+
 </html>
