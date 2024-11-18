@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const button = document.getElementById('saudacao');
-
-	if (button) {
-		button.addEventListener('click', () => {
-			alert('Bem-vindo à nossa apostila web!');
-		});
-	}
-});
+    // Botão de saudação
+    const buttonSaudacao = document.getElementById('saudacao');
+    if (buttonSaudacao) {
+        buttonSaudacao.addEventListener('click', () => {
+            const hours = new Date().getHours();
+            const greeting = hours < 12 ? "Bom dia" : hours < 18 ? "Boa tarde" : "Boa noite";
+            alert(`${greeting}! Bem-vindo à nossa apostila web!`);
+        });
+    }
+	});
 async function fetchGitHubUser(username) {
 	const response = await fetch(`https://api.github.com/users/${username}`);
 	if (!response.ok) {
@@ -137,3 +139,15 @@ function validateForm() {
 	return isValid;
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const addItemButton = document.getElementById('addItemButton');
+    const dynamicList = document.getElementById('dynamicList');
+
+    if (addItemButton) {
+        addItemButton.addEventListener('click', () => {
+            const newItem = document.createElement('li');
+            newItem.textContent = `Item ${dynamicList.children.length + 1}`;
+            dynamicList.appendChild(newItem);
+        });
+    }
+});
