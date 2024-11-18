@@ -52,21 +52,169 @@
             </pre>
             <p>Neste exemplo, a tag <code>&lt;html&gt;</code> contém todo o conteúdo do documento. O
                 <code>&lt;head&gt;</code> define metadados e informações sobre o documento, enquanto o
-                <code>&lt;body&gt;</code> contém o conteúdo visível na página.</p>
+                <code>&lt;body&gt;</code> contém o conteúdo visível na página.
+            </p>
+            <h2>O que é uma Tag?</h2>
+
+            <p><strong>Tag</strong> é um comando usado em HTML para estruturar o conteúdo de uma página web. Ela é composta por uma tag de abertura e uma tag de fechamento. Entre essas tags, colocamos o conteúdo a ser exibido na página.</p>
+
+            <h3>Tags HTML</h3>
+            <table>
+                <caption>Definições de Tags HTML</caption>
+                <thead>
+                    <tr>
+                        <th>Tag HTML</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>&lt;html&gt;</strong></td>
+                        <td>Define um documento HTML</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;body&gt;</strong></td>
+                        <td>Define o corpo do documento</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;h1&gt; a &lt;h6&gt;</strong></td>
+                        <td>Define título 1 a título 6</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;p&gt;</strong></td>
+                        <td>Define um parágrafo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;br&gt;</strong></td>
+                        <td>Insere uma única quebra de linha</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;hr&gt;</strong></td>
+                        <td>Define um filete horizontal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;!--&gt;</strong></td>
+                        <td>Define um comentário</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;strong&gt;</strong></td>
+                        <td>Usado para aplicar negrito ao texto</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+    <h4>Exemplo de Código:</h4>
+    <pre>
+&lt;h1&gt;Este é um título&lt;/h1&gt;
+&lt;p&gt;Este é um parágrafo&lt;/p&gt;
+&lt;strong&gt;Texto em negrito&lt;/strong&gt;
+    </pre>
+
+                      
+            <h3>Seções</h3>
+            <p>Aqui são definidas as seções do conteúdo da página, como "Início", "Sobre" e "Contato".</p>
+
+            <pre>
+                &lt;section id="home"&gt; /* Seção Início */
+                    &lt;h2&gt;Início&lt;/h2&gt;
+                    &lt;p&gt;Conteúdo principal da página de início&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;section id="sobre"&gt; /* Seção Sobre */
+                    &lt;h2&gt;Sobre Nós&lt;/h2&gt;
+                    &lt;p&gt;Informações sobre a empresa ou o projeto&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;section id="contato"&gt; /* Seção Contato */
+                    &lt;h2&gt;Contato&lt;/h2&gt;
+                    &lt;p&gt;Formulário de contato ou informações para entrar em contato&lt;/p&gt;
+                &lt;/section&gt;
+            </pre>
+
+            <p>As seções são organizadas com a tag <code>&lt;section&gt;</code> e possuem um atributo <code>id</code>
+                único para cada parte da página. Esses IDs são usados pelos links de navegação para facilitar a rolagem
+                até as seções.</p>
+            <h3>Links de Navegação</h3>
+            <p>Os links de navegação permitem que o usuário se mova entre diferentes seções da mesma página.</p>
+
+            <pre>
+            &lt;nav&gt; /* Menu de navegação */
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#inicio"&gt;Início&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+            &lt;section id="inicio"&gt; /* Seção Início */
+                &lt;h2&gt;Início&lt;/h2&gt;
+                &lt;p&gt;Conteúdo da seção de início&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="sobre"&gt; /* Seção Sobre */
+                &lt;h2&gt;Sobre Nós&lt;/h2&gt;
+                &lt;p&gt;Conteúdo da seção sobre&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="contato"&gt; /* Seção Contato */
+                &lt;h2&gt;Contato&lt;/h2&gt;
+                &lt;p&gt;Conteúdo da seção de contato&lt;/p&gt;
+            &lt;/section&gt;
+            </pre>
+
+            <p>O exemplo acima mostra um menu de navegação que leva o usuário para as seções "Início", "Sobre" e
+                "Contato" dentro da mesma página. Cada link tem um atributo <code>href</code> que aponta para o ID de
+                uma seção específica.</p>
 
             <h3>Listas</h3>
-            <p>HTML permite criar listas ordenadas e desordenadas. Veja os exemplos:</p>
+            <p>HTML permite criar listas ordenadas, listas desordenadas e listas de definições. Veja os exemplos:</p>
             <p><strong>Lista desordenada (marcada com pontos):</strong></p>
             <ul>
                 <li>Item 1</li>
                 <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
             </ul>
+            <p><strong>Aqui está o código correspondente:</strong></p>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-br"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Listas&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt; 
+                &lt;ul&gt;
+                    &lt;li&gt;Item 1&lt;/li&gt;
+                    &lt;li&gt;Item 2&lt;/li&gt;
+                    &lt;li&gt;Item 3&lt;/li&gt;
+                    &lt;li&gt;Item 4&lt;/li&gt;
+                &lt;/ul&gt;  
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
             <p><strong>Lista ordenada (numerada):</strong></p>
             <ol>
                 <li>Item 1</li>
                 <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
             </ol>
-        </section>
+            <p><strong>Aqui está o código correspondente:</strong></p>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-br"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Listas&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt; 
+                &lt;ol&gt;
+                    &lt;li&gt;Item 1&lt;/li&gt;
+                    &lt;li&gt;Item 2&lt;/li&gt;
+                    &lt;li&gt;Item 3&lt;/li&gt;
+                    &lt;li&gt;Item 4&lt;/li&gt;
+                &lt;/ol&gt; 
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
+        
 
         <h3>Imagens</h3>
         <p>Imagens são importantes para enriquecer o conteúdo visualmente e ilustrar informações. Para adicionar uma
@@ -79,7 +227,7 @@
 
         <h3>Tabelas</h3>
         <p>Tabelas organizam dados em linhas e colunas. Exemplo de uma tabela simples:</p>
-        <table border="1">
+        <table>
             <caption>Tabela de Exemplos</caption>
             <thead>
                 <tr>
@@ -103,8 +251,41 @@
         </table>
         <p>O exemplo acima cria uma tabela com cabeçalho e duas linhas de dados. A tag <code>&lt;caption&gt;</code>
             fornece um título para a tabela.</p>
-
-        <section id="html">
+        <p><strong>Aqui está o código correspondente:</strong></p>
+        <pre> 
+            &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-br"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Tabelas&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt; 
+                &lt;table&gt;
+                &lt;caption&gt;Tabela de Exemplos&lt;/caption&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Nome&lt;/th&gt;
+                        &lt;th&gt;Idade&lt;/th&gt;
+                        &lt;th&gt;Cidade&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Ana&lt;/td&gt;
+                        &lt;td&gt;25&lt;/td&gt;
+                        &lt;td&gt;São Paulo&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Bruno&lt;/td&gt;
+                        &lt;td&gt;30&lt;/td&gt;
+                        &lt;td&gt;Rio de Janeiro&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+                &lt;/table&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;   
+        </pre>
+        
             <h2>Formulários</h2>
             <p>Formulários coletam dados dos usuários. Abaixo está um exemplo de formulário de contato:</p>
             <form id="contactForm" action="*" method="post" onsubmit="return validateForm()">
@@ -131,6 +312,42 @@
 
                 <button type="submit">Enviar</button>
             </form>
+        <p><strong>Assim seria o código para criar esse conteúdo:</strong></p>
+        <pre>
+            &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-br"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Formulários&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt; 
+                &lt;form id=&quot;contactForm&quot; action=&quot;*&quot; method=&quot;post&quot; onsubmit=&quot;return validateForm()&quot;&gt;
+                &lt;label for=&quot;nome&quot;&gt;Nome:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;nome&quot; name=&quot;nome&quot; required&gt;
+                &lt;span id=&quot;errorNome&quot; class=&quot;error&quot;&gt;&lt;/span&gt;
+            
+                &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+                &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required&gt;
+                &lt;span id=&quot;errorEmail&quot; class=&quot;error&quot;&gt;&lt;/span&gt;
+            
+                &lt;label for=&quot;assunto&quot;&gt;Assunto:&lt;/label&gt;
+                &lt;select id=&quot;assunto&quot; name=&quot;assunto&quot; required&gt;
+                    &lt;option value=&quot;&quot;&gt;Selecione um assunto&lt;/option&gt;
+                    &lt;option value=&quot;duvida&quot;&gt;Dúvida&lt;/option&gt;
+                    &lt;option value=&quot;sugestao&quot;&gt;Sugestão&lt;/option&gt;
+                    &lt;option value=&quot;reclamacao&quot;&gt;Reclamação&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;span id=&quot;errorAssunto&quot; class=&quot;error&quot;&gt;&lt;/span&gt;
+            
+                &lt;label for=&quot;mensagem&quot;&gt;Mensagem:&lt;/label&gt;
+                &lt;textarea id=&quot;mensagem&quot; name=&quot;mensagem&quot; rows=&quot;4&quot; required&gt;&lt;/textarea&gt;
+                &lt;span id=&quot;errorMensagem&quot; class=&quot;error&quot;&gt;&lt;/span&gt;
+            
+                &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+        </pre>
         </section>
     </main>
     <footer>
