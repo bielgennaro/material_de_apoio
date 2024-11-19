@@ -24,16 +24,39 @@
         <section id="html">
             <h2>HTML - Linguagem de Marcação de Hipertexto</h2>
             <ul>
-                <li> (Hypertext Markup Language) é a linguagem padrão para criação de páginas na web.</li> Isto
+                <li> (Hypertext Markup Language) é a linguagem padrão para criação de páginas na web;</li> Isto
                 significa que é um código utilizado para descrever a
                 estrutura de um documento, mas não é a verdadeira
-                apresentação dele.</li>
+                apresentação dele;</li>
                 <li> O HTML diz ao navegador, tudo sobre o conteúdo recebido, e
                     a estrutura da página;</li>
                 <li>O HTML define cabeçalhos, parágrafos, listas, tabelas entre
                     muitos outros elementos, por meio de marcas (tags).</li>
             </ul>
-            <p>A seguir, veremos a estrutura básica de um documento HTML:</p>
+            <h3>Instalações e Uso</h3>
+            <ul>
+                <li>VS Code <a href="https://code.visualstudio.com/" target="_blank">LINK AQUI</a>;</li>
+                <li>Extensão a ser instalada no VS Code HTML, Javascript;</li>
+                <li>Todas as aulas:</li>
+                <ol>
+                    <li>Crie uma pasta com o nome da aula (em um local da sua
+                        preferência);</li>
+                    <li>Abra o VS Code;</li>
+                    <li>Clique em Arquivo > Abrir Patas;</li>
+                    <li>Selecione a pasta criada no passo 1 > Selecionar;</li>
+                    <li>No VSCode clique em Arquivo > Novo arquivo;</li>
+                    <li>Crie um arquivo de nome index.html.</li>
+                </ol>
+            </ul>
+
+            <h3>Para visualizar sua página web...</h3>
+            <ol>
+                <li>No navegador de arquivos, encontre sua pasta;</li>
+                <li>Clique com o botão direito do mouse sobre o arquivo
+                    index.html > Abrir com... > Google Chrome (ou outro
+                    navegador web).</li>
+            </ol>
+            <h4>A seguir, veremos a estrutura básica de um documento HTML:</h4>
 
             <h3>Estrutura básica de um documento HTML</h3>
             <p>O exemplo abaixo mostra a estrutura básica de um documento HTML com suas principais tags:</p>
@@ -56,7 +79,9 @@
             </p>
             <h2>O que é uma Tag?</h2>
 
-            <p><strong>Tag</strong> é um comando usado em HTML para estruturar o conteúdo de uma página web. Ela é composta por uma tag de abertura e uma tag de fechamento. Entre essas tags, colocamos o conteúdo a ser exibido na página.</p>
+            <p><strong>Tag</strong> é um comando usado em HTML para estruturar o conteúdo de uma página web. Ela é
+                composta por uma tag de abertura e uma tag de fechamento. Entre essas tags, colocamos o conteúdo a ser
+                exibido na página.</p>
 
             <h3>Tags HTML</h3>
             <table>
@@ -70,126 +95,169 @@
                 <tbody>
                     <tr>
                         <td><strong>&lt;html&gt;</strong></td>
-                        <td>Define um documento HTML</td>
+                        <td>Define um documento HTML.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;head&gt;</strong></td>
+                        <td>Apresenta informações gerais sobre a
+                            página e de configuração.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;main&gt;</strong></td>
+                        <td>Utilizado para especificar
+                            o conteúdo principal, de
+                            maior relevância, de um
+                            documento.<br>
+                            Cada página deve
+                            apresentar apenas um
+                            conteúdo principal.<br>
+                            Exemplo: espaço
+                            reservado para a
+                            apresentação do conteúdo
+                            de um blog.</td>
                     </tr>
                     <tr>
                         <td><strong>&lt;body&gt;</strong></td>
-                        <td>Define o corpo do documento</td>
+                        <td>Define o corpo do documento.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;header&gt;</strong></td>
+                        <td>Utilizado para
+                            representar o cabeçalho
+                            de um documento ou
+                            seção.<br>
+                            Exemplo: cabeçalho de
+                            uma página.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;nav&gt;</strong></td>
+                        <td>Utilizado para
+                            representar um
+                            agrupamento de links
+                            de navegação.<br>
+                            Exemplo: paginação
+                            de uma busca.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;aside&gt;</strong></td>
+                        <td>Utilizado para criar um
+                            conteúdo de apoio, ou
+                            adicional, ao conteúdo
+                            principal.<br>
+                            Exemplo: artigos com
+                            temas relacionados de um
+                            blog.</td>
                     </tr>
                     <tr>
                         <td><strong>&lt;h1&gt; a &lt;h6&gt;</strong></td>
-                        <td>Define título 1 a título 6</td>
+                        <td>Para indicar que um texto é um
+                            título em nossa página,
+                            utilizamos a tag de heading;<br>
+                            São tags de conteúdo e vão de
+                            &lt;h1&gt; a &lt;h6&gt;.<br>
+                            A variação entre as tags de
+                            heading definem o grau de
+                            destaque do texto.</td>
                     </tr>
                     <tr>
                         <td><strong>&lt;p&gt;</strong></td>
-                        <td>Define um parágrafo</td>
+                        <td>Define um parágrafo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;span&gt;</strong></td>
+                        <td>tag para representar um texto sem significado (deve
+                            ser usado quando nenhum outro elemento de texto semântico
+                            representar um significado adequado).</td>
                     </tr>
                     <tr>
                         <td><strong>&lt;br&gt;</strong></td>
-                        <td>Insere uma única quebra de linha</td>
+                        <td>Insere uma única quebra de linha.</td>
                     </tr>
                     <tr>
                         <td><strong>&lt;hr&gt;</strong></td>
-                        <td>Define um filete horizontal</td>
+                        <td>Define um filete horizontal.</td>
                     </tr>
                     <tr>
                         <td><strong>&lt;!--&gt;</strong></td>
-                        <td>Define um comentário</td>
+                        <td>Define um comentário.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;strike&gt;</strong></td>
+                        <td>Permite tachar algum trecho: uma linha reta horizontal fica sobreposta ao texto.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;sub&gt;</strong></td>
+                        <td>Possibilita o subscrito: um trecho de texto fica abaixo da linha das demais partes do texto.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;sup&gt;</strong></td>
+                        <td>Permite o sobrescrito: um trecho de texto fica acima da linha das demais partes do texto.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;big&gt; e &lt;small&gt;</strong></td>
+                        <td>Modifica o tamanho de um trecho do texto, tornando-o um pouco maior (<em>big</em>) ou menor
+                            (<em>small</em>).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;tt&gt;</strong></td>
+                        <td>Mantém o mesmo espaçamento entre todos os caracteres. É utilizada para escrever o texto com
+                            fonte de máquina de escrever, chamada de monoespaçada. Por exemplo, a letra "i" ocupa o
+                            mesmo espaço horizontal que a letra "m".</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;pre&gt;</strong></td>
+                        <td>Faz com que o navegador exiba o texto como ele é digitado, incluindo novas linhas,
+                            tabulações e espaços extras. Utilizada para texto pré-formatado.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;cite&gt;</strong></td>
+                        <td>Mantém o título de uma publicação em itálico.</td>
                     </tr>
                     <tr>
                         <td><strong>&lt;strong&gt;</strong></td>
-                        <td>Usado para aplicar negrito ao texto</td>
+                        <td>Dá ênfase a uma palavra ou frase por meio do negrito.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;em&gt;</strong></td>
+                        <td>Dá ênfase a uma palavra ou frase por meio do itálico.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;blockquote&gt;</strong></td>
+                        <td>Permite a inclusão de uma citação longa ou de uma citação a um trecho de texto que tem
+                            origem em outro site.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;q&gt;</strong></td>
+                        <td>Atua de forma semelhante à tag <strong>blockquote</strong>, porém é aplicada para citações
+                            com uma única linha.</td>
                     </tr>
                 </tbody>
             </table>
-            
 
-    <h4>Exemplo de Código:</h4>
-    <pre>
-&lt;h1&gt;Este é um título&lt;/h1&gt;
-&lt;p&gt;Este é um parágrafo&lt;/p&gt;
-&lt;strong&gt;Texto em negrito&lt;/strong&gt;
-    </pre>
-
-                      
-            <h3>Seções</h3>
-            <p>Aqui são definidas as seções do conteúdo da página, como "Início", "Sobre" e "Contato".</p>
-
+            <h4>Exemplo de Código:</h4>
             <pre>
-                &lt;section id="home"&gt; /* Seção Início */
-                    &lt;h2&gt;Início&lt;/h2&gt;
-                    &lt;p&gt;Conteúdo principal da página de início&lt;/p&gt;
-                &lt;/section&gt;
-                &lt;section id="sobre"&gt; /* Seção Sobre */
-                    &lt;h2&gt;Sobre Nós&lt;/h2&gt;
-                    &lt;p&gt;Informações sobre a empresa ou o projeto&lt;/p&gt;
-                &lt;/section&gt;
-                &lt;section id="contato"&gt; /* Seção Contato */
-                    &lt;h2&gt;Contato&lt;/h2&gt;
-                    &lt;p&gt;Formulário de contato ou informações para entrar em contato&lt;/p&gt;
-                &lt;/section&gt;
+                &lt;h1&gt;Este é um título&lt;/h1&gt;
+                &lt;p&gt;Este é um parágrafo&lt;/p&gt;
+                &lt;strong&gt;Texto em negrito&lt;/strong&gt;
             </pre>
 
-            <p>As seções são organizadas com a tag <code>&lt;section&gt;</code> e possuem um atributo <code>id</code>
-                único para cada parte da página. Esses IDs são usados pelos links de navegação para facilitar a rolagem
-                até as seções.</p>
-            <h3>Links de Navegação</h3>
-            <p>Os links de navegação permitem que o usuário se mova entre diferentes seções da mesma página.</p>
+            <h2>Listas</h2>
 
-            <pre>
-            &lt;nav&gt; /* Menu de navegação */
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="#inicio"&gt;Início&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/nav&gt;
-            &lt;section id="inicio"&gt; /* Seção Início */
-                &lt;h2&gt;Início&lt;/h2&gt;
-                &lt;p&gt;Conteúdo da seção de início&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;section id="sobre"&gt; /* Seção Sobre */
-                &lt;h2&gt;Sobre Nós&lt;/h2&gt;
-                &lt;p&gt;Conteúdo da seção sobre&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;section id="contato"&gt; /* Seção Contato */
-                &lt;h2&gt;Contato&lt;/h2&gt;
-                &lt;p&gt;Conteúdo da seção de contato&lt;/p&gt;
-            &lt;/section&gt;
-            </pre>
-
-            <p>O exemplo acima mostra um menu de navegação que leva o usuário para as seções "Início", "Sobre" e
-                "Contato" dentro da mesma página. Cada link tem um atributo <code>href</code> que aponta para o ID de
-                uma seção específica.</p>
-
-            <h3>Listas</h3>
             <p>HTML permite criar listas ordenadas, listas desordenadas e listas de definições. Veja os exemplos:</p>
-            <p><strong>Lista desordenada (marcada com pontos):</strong></p>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
-            </ul>
-            <p><strong>Aqui está o código correspondente:</strong></p>
-            <pre>
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="pt-br"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;title&gt;Listas&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt; 
-                &lt;ul&gt;
-                    &lt;li&gt;Item 1&lt;/li&gt;
-                    &lt;li&gt;Item 2&lt;/li&gt;
-                    &lt;li&gt;Item 3&lt;/li&gt;
-                    &lt;li&gt;Item 4&lt;/li&gt;
-                &lt;/ul&gt;  
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </pre>
+
             <p><strong>Lista ordenada (numerada):</strong></p>
+            <ul>
+                <li>Cria uma lista que segue
+                    uma sequência numérica;
+                    Utiliza a tag &lt;ol&gt;
+                    (ordered list);</li>
+                <li>Cada item da lista é
+                    expresso entre a tag
+                    &lt;li&gt; (list item).</li>
+            </ul>
+            <p><strong>Exemplo:</strong></p>
             <ol>
                 <li>Item 1</li>
                 <li>Item 2</li>
@@ -214,45 +282,371 @@
                 &lt;/body&gt;
                 &lt;/html&gt;
             </pre>
-        
 
-        <h3>Imagens</h3>
-        <p>Imagens são importantes para enriquecer o conteúdo visualmente e ilustrar informações. Para adicionar uma
-            imagem, usamos a tag <code>&lt;img&gt;</code>:</p>
-        <pre>
-            &lt;img src="caminho-da-imagem.jpg" alt="Descrição da imagem" width="300" height="200"&gt;
+            <p><strong>Lista desordenada (marcada com pontos):</strong></p>
+            <ul>
+                <li>Cria uma lista que não
+                    segue uma sequência.
+                    Utiliza a tag &lt;ul&gt;
+                    (unordered list);</li>
+                <li>Cada item da lista é
+                    expresso entre a tag
+                    &lt;li&gt; (list item).</li>
+            </ul>
+
+            <p><strong>Exemplo:</strong></p>
+
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+            <p><strong>Aqui está o código correspondente:</strong></p>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-br"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Listas&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt; 
+                &lt;ul&gt;
+                    &lt;li&gt;Item 1&lt;/li&gt;
+                    &lt;li&gt;Item 2&lt;/li&gt;
+                    &lt;li&gt;Item 3&lt;/li&gt;
+                    &lt;li&gt;Item 4&lt;/li&gt;
+                &lt;/ul&gt;  
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
+
+            <p><strong>Lista de definição:</strong></p>
+            <ul>
+                <li>Cria uma lista que define algum termo;</li>
+                <li>Utiliza a tag <code>&lt;dl&gt;</code> (definition list);</li>
+                <li>Um termo é representado pela tag <code>&lt;dt&gt;</code> (definition term);</li>
+                <li>A definição é representada pela tag <code>&lt;dd&gt;</code> (definition definition);</li>
+                <li>Uma <code>&lt;dt&gt;</code> pode ter uma ou mais <code>&lt;dd&gt;</code>.</li>
+            </ul>
+            <pre>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                  &lt;title&gt;Listas&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;p&gt;Esta é uma lista de definição&lt;/p&gt;
+                  &lt;dl&gt;
+                    &lt;dt&gt;Item 1&lt;/dt&gt;
+                    &lt;dd&gt;Definição 1&lt;/dd&gt;
+                    &lt;dt&gt;Item 2&lt;/dt&gt;
+                    &lt;dd&gt;Definição 2.1&lt;/dd&gt;
+                    &lt;dd&gt;Definição 2.2&lt;/dd&gt;
+                    &lt;dt&gt;Item 3&lt;/dt&gt;
+                    &lt;dd&gt;Definição 3&lt;/dd&gt;
+                  &lt;/dl&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </pre>
+
+            <p><strong>Listas aninhadas:</strong></p>
+            <ul>
+                <li>Um item de uma lista
+                    pode se tornar uma nova
+                    lista;</li>
+                <li>Essa estrutura representa
+                    uma sub lista de uma
+                    lista principal.</li>
+            </ul>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                    &lt;title&gt;Listas&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;p&gt;Esta é uma lista aninhada&lt;/p&gt;
+                    &lt;ol&gt;
+                      &lt;li&gt;Item 1&lt;/li&gt;
+                      &lt;ul&gt;
+                        &lt;li&gt;Subitem 1&lt;/li&gt;
+                        &lt;li&gt;Subitem 2&lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;li&gt;Item 2&lt;/li&gt;
+                      &lt;li&gt;Item 3&lt;/li&gt;
+                    &lt;/ol&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;                
+            </pre>
+
+            <h2>Links</h2>
+            <ul>
+                <li>Os links de navegação permitem que o usuário se mova entre diferentes seções da mesma página;</li>
+                <li>Utilizado com a tag &lt;a&gt;;
+                </li>
+                <li>
+                    href: endereço da página
+                    na qual o link aponta;</li>
+                <li>mailto: abre a interface
+                    para envio de e-mail;</li>
+                <li>#id: uma parte
+                    específica da página;</li>
+                <li>Download: link é um
+                    download.</li>
+            </ul>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                    &lt;title&gt;Links&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;p id=&quot;paragrafo1&quot;&gt;Estes são links&lt;/p&gt;
+                
+                    &lt;p&gt;
+                      Link para a página:
+                      &lt;a href=&quot;http://www.google.com.br&quot;&gt;Google&lt;/a&gt;
+                    &lt;/p&gt;
+                
+                    &lt;p&gt;
+                      Link de envio de email:
+                      &lt;a href=&quot;mailto:juliana.silva@up.edu.br&quot;&gt;
+                        Enviar
+                      &lt;/a&gt;
+                    &lt;/p&gt;
+                
+                    &lt;p&gt;
+                      Link para um local desta página:
+                      &lt;a href=&quot;#paragrafo1&quot;&gt;Parágrafo&lt;/a&gt;
+                    &lt;/p&gt;
+                
+                    &lt;p&gt;
+                      Link para download:
+                      &lt;a href=&quot;download:exercicio1.txt&quot;&gt;Baixar&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
+            <h4>Parâmetros de link:</h4>
+            <ul>
+                <li>target: especifica onde abrir o novo documento;</li>
+                <li>blank: abre em uma nova janela;</li>
+                <li>self: abre onde o documento atual está (default).</li>
+            </ul>
+            <pre>
+                &lt;p&gt;
+                Link para a página:
+                &lt;a href=&quot;http://www.google.com.br&quot; target=&quot;_blank&quot;&gt;
+                  Google
+                &lt;/a&gt;
+              &lt;/p&gt;
+            </pre>
+
+            <h2>Imagens</h2>
+            <p>Imagens são importantes para enriquecer o conteúdo visualmente e ilustrar informações. Para adicionar uma
+                imagem, usamos a tag <code>&lt;img&gt;</code>:</p>
+            <pre>
+            &lt;img src="caminho-da-imagem.jpg" alt="Descrição da imagem" title = "Tag img"/&gt;
         </pre>
-        <p>O atributo <code>src</code> indica o caminho da imagem, e o <code>alt</code> fornece uma descrição
-            alternativa, essencial para acessibilidade.</p>
+            <p>O atributo <code>src</code> indica o caminho da imagem, o <code>alt</code> fornece uma descrição
+                alternativa, essencial para acessibilidade e o <code>title</code> apresenta informação adicional
+                sobre a imagem (tootip);</p>
+            <p>Adicionando imagens como links na página:</p>
+            <ul>
+                <li>Você pode utilizar uma imagem como link;</li>
+                <li>Basta adicionar a tag <img> dentro da tag &lt;a&gt;.</li>
+            </ul>
+            <pre>
+                &lt;a href="http://www.google.com.br"&gt;
+                  &lt;img src="imagem.jpg" alt="Tag img"&gt;
+                &lt;/a&gt;
+            </pre>
 
-        <h3>Tabelas</h3>
-        <p>Tabelas organizam dados em linhas e colunas. Exemplo de uma tabela simples:</p>
-        <table>
-            <caption>Tabela de Exemplos</caption>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Idade</th>
-                    <th>Cidade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ana</td>
-                    <td>25</td>
-                    <td>São Paulo</td>
-                </tr>
-                <tr>
-                    <td>Bruno</td>
-                    <td>30</td>
-                    <td>Rio de Janeiro</td>
-                </tr>
-            </tbody>
-        </table>
-        <p>O exemplo acima cria uma tabela com cabeçalho e duas linhas de dados. A tag <code>&lt;caption&gt;</code>
-            fornece um título para a tabela.</p>
-        <p><strong>Aqui está o código correspondente:</strong></p>
-        <pre> 
+            <h3>Atributo id</h3>
+            <ul>
+                <li>O atributo id serve para
+                    identificar unicamente um
+                    elemento de uma página;</li>
+                <li>Atributo global: qualquer
+                    tag do HTML pode possuir
+                    um id;</li>
+                <li>Seu valor deve começar um
+                    uma letra ou um underline;</li>
+                <li>Dois elementos em uma
+                    mesma página não podem
+                    possuir o mesmo id;</li>
+                <li>Auxilia o CSS e o
+                    JavaScript.</li>
+            </ul>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"/&gt;
+                        &lt;title&gt;Imagens&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;p id="paragrafo1"&gt;Imagens na página&lt;/p&gt;
+                        &lt;img 
+                            src="imagen.jpg" 
+                            alt="Uma imagem" 
+                            title="Tag img"
+                        /&gt;
+                        &lt;a href="http://www.google.com.br"&gt;
+                            &lt;img src="imagen.jpg" alt="Tag img"/&gt;
+                        &lt;/a&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;                
+            </pre>
+
+            <h3>Atributo class</h3>
+            <ul>
+                <li>O atributo class serve para
+                    categorizar um grupo de
+                    elementos com o mesmo
+                    comportamento;</li>
+                <li>Atributo global: qualquer
+                    tag do HTML pode possuir
+                    um class;</li>
+                <li>Seu valor deve começar um
+                    uma letra ou um underline;</li>
+                <li>Auxilia o CSS e o
+                    JavaScript.</li>
+            </ul>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"/&gt;
+                        &lt;title&gt;Atributos&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;p class="importante"&gt;atributo class&lt;/p&gt;
+                        &lt;p&gt;atributos categorizam elementos&lt;/p&gt;
+                        &lt;p class="importante"&gt;atributo class&lt;/p&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;                
+            </pre>
+
+            <h3>Elementos: Block</h3>
+            <h4>Elementos Block</h4>
+            <ul>
+                <li>Elementos que “sempre” são renderizados no começo de uma
+                    nova linha.</li>
+            </ul>
+            <h4>Elementos Block em HTML</h4>
+            <pre>
+                &lt;address&gt; &lt;article&gt; &lt;aside&gt; &lt;blockquote&gt; &lt;canvas&gt; &lt;dd&gt; &lt;div&gt;
+                &lt;dl&gt; &lt;dt&gt; &lt;fieldset&gt; &lt;figcaption&gt; &lt;figure&gt; &lt;footer&gt; &lt;form&gt;
+                &lt;h1&gt;-&lt;h6&gt; &lt;header&gt; &lt;hr&gt; &lt;li&gt; &lt;main&gt; &lt;nav&gt; &lt;noscript&gt;
+                &lt;ol&gt; &lt;output&gt; &lt;p&gt; &lt;pre&gt; &lt;section&gt; &lt;table&gt; &lt;tfoot&gt;
+                &lt;ul&gt; &lt;video&gt;                
+            </pre>
+            <h3>Elementos: Inline</h3>
+            <h4>Elementos Inline</h4>
+            <ul>
+                <li>Elementos que “sempre” são renderizados na mesma linha, ao
+                    término de um elemento anterior.</li>
+            </ul>
+            <h4>Elementos InLine em HTML</h4>
+            <pre>
+                &lt;a&gt; &lt;abbr&gt; &lt;acronym&gt; &lt;b&gt; &lt;bdc&gt; &lt;big&gt; &lt;br&gt;
+                &lt;button&gt; &lt;cite&gt; &lt;code&gt; &lt;dfn&gt; &lt;em&gt; &lt;i&gt; &lt;img&gt;
+                &lt;input&gt; &lt;kbd&gt; &lt;label&gt; &lt;map&gt; &lt;object&gt; &lt;q&gt; &lt;samp&gt;
+                &lt;script&gt; &lt;select&gt; &lt;small&gt; &lt;span&gt; &lt;strong&gt; &lt;sub&gt; &lt;sup&gt;
+                &lt;textarea&gt; &lt;time&gt; &lt;tt&gt; &lt;var&gt;                
+            </pre>
+
+            <h2>Div</h2>
+
+            <ul>
+                <li>Permite o agrupamento de
+                    um conjunto de elementos
+                    em uma box block-level;</li>
+                <li>Cada conteúdo de uma div
+                    será apresentado em uma
+                    nova linha;</li>
+                <li>Esse comportamento pode
+                    ser alterado com CSS;</li>
+                <li>Melhora a organização do
+                    código;</li>
+                <li>É permitido colocar
+                    qualquer elemento dentro
+                    de uma div.</li>
+            </ul>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                    &lt;meta charset="UTF-8" /&gt;
+                    &lt;title&gt;Div&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;div&gt;
+                      &lt;img src="imagem.jpg" /&gt;
+                      &lt;ul&gt;
+                        &lt;li&gt;Item 1&lt;/li&gt;
+                        &lt;li&gt;Item 2&lt;/li&gt;
+                      &lt;/ul&gt;
+                    &lt;/div&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;                
+            </pre>
+
+            <h2>Seções</h2>
+            <p>Aqui são definidas as seções do conteúdo da página, como "Início", "Sobre" e "Contato".</p>
+
+            <pre>
+                &lt;section id="home"&gt; /* Seção Início */
+                    &lt;h2&gt;Início&lt;/h2&gt;
+                    &lt;p&gt;Conteúdo principal da página de início&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;section id="sobre"&gt; /* Seção Sobre */
+                    &lt;h2&gt;Sobre Nós&lt;/h2&gt;
+                    &lt;p&gt;Informações sobre a empresa ou o projeto&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;section id="contato"&gt; /* Seção Contato */
+                    &lt;h2&gt;Contato&lt;/h2&gt;
+                    &lt;p&gt;Formulário de contato ou informações para entrar em contato&lt;/p&gt;
+                &lt;/section&gt;
+            </pre>
+
+            <p>As seções são organizadas com a tag <code>&lt;section&gt;</code> e possuem um atributo <code>id</code>
+                único para cada parte da página. Esses IDs são usados pelos links de navegação para facilitar a rolagem
+                até as seções.</p>
+
+            <h2>Tabelas</h2>
+            <p>Tabelas organizam dados em linhas e colunas. Exemplo de uma tabela simples:</p>
+            <table>
+                <caption>Tabela de Exemplos</caption>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Cidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana</td>
+                        <td>25</td>
+                        <td>São Paulo</td>
+                    </tr>
+                    <tr>
+                        <td>Bruno</td>
+                        <td>30</td>
+                        <td>Rio de Janeiro</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>O exemplo acima cria uma tabela com cabeçalho e duas linhas de dados. A tag <code>&lt;caption&gt;</code>
+                fornece um título para a tabela.</p>
+            <p><strong>Aqui está o código correspondente:</strong></p>
+            <pre>
             &lt;!DOCTYPE html&gt;
                 &lt;html lang="pt-br"&gt;
                 &lt;head&gt;
@@ -285,9 +679,19 @@
                 &lt;/body&gt;
                 &lt;/html&gt;   
         </pre>
-        
+
             <h2>Formulários</h2>
-            <p>Formulários coletam dados dos usuários. Abaixo está um exemplo de formulário de contato:</p>
+            <p>Formulários são utilizados para a aquisição
+                de informações do usuário.</p>
+            <ul>
+                <li>Um formulário e englobado pela tag: &lt;form
+                    method = “ ” action = “ ”&gt;;</li>
+                <li>method define a forma de envio dos valores
+                    entre get ou post;</li>
+                <li>action aponta para a página no servidor que
+                    recebera as informações do formulário.</li>
+            </ul>
+            <p>Abaixo está um exemplo de formulário de contato:</p>
             <form id="contactForm" action="*" method="post" onsubmit="return validateForm()">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -312,8 +716,8 @@
 
                 <button type="submit">Enviar</button>
             </form>
-        <p><strong>Assim seria o código para criar esse conteúdo:</strong></p>
-        <pre>
+            <p><strong>Assim seria o código para criar esse conteúdo:</strong></p>
+            <pre>
             &lt;!DOCTYPE html&gt;
                 &lt;html lang="pt-br"&gt;
                 &lt;head&gt;
