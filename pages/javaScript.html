@@ -127,6 +127,69 @@ document.addEventListener('DOMContentLoaded', () => {
         <div id="profilesContainer"></div>
       </section>
 
+      <section id="postman">
+        <h2>Postman - Ferramenta para Testar APIs</h2>
+        <p>
+          O <strong>Postman</strong> é uma ferramenta popular para
+          desenvolvimento, teste e documentação de APIs. Ele oferece uma
+          interface gráfica para enviar requisições HTTP, facilitando a
+          interação com APIs RESTful. O Postman permite testar métodos como GET,
+          POST, PUT e DELETE de forma simples e eficaz.
+        </p>
+        <h3>Principais Funcionalidades do Postman:</h3>
+        <ul>
+          <li>
+            <strong>Envío de Requisições:</strong> Envie requisições GET, POST,
+            PUT, DELETE para testar os endpoints de uma API.
+          </li>
+          <li>
+            <strong>Testes de APIs:</strong> Crie coleções de testes
+            automatizados para garantir que a API esteja funcionando conforme
+            esperado.
+          </li>
+          <li>
+            <strong>Documentação:</strong> Gere documentação interativa para as
+            APIs que você desenvolve.
+          </li>
+          <li>
+            <strong>Variáveis de Ambiente:</strong> Use variáveis para
+            configurar diferentes ambientes (desenvolvimento, produção, etc.).
+          </li>
+        </ul>
+
+        <h3>Exemplo Prático de Uso do Postman:</h3>
+        <p>
+          Vamos imaginar que você precisa testar uma API que retorna informações
+          sobre usuários. Com o Postman, você pode enviar uma requisição GET
+          para o endpoint <code>https://api.exemplo.com/users</code> para obter
+          a lista de usuários:
+        </p>
+        <ul>
+          <li>Selecione o método <strong>GET</strong>.</li>
+          <li>
+            Digite o endpoint da API no campo de URL:
+            <code>https://api.exemplo.com/users</code>.
+          </li>
+          <li>Clique em <strong>Send</strong>.</li>
+          <li>Veja a resposta JSON contendo a lista de usuários.</li>
+        </ul>
+        <p>
+          Além disso, se você quiser enviar dados para criar um novo usuário,
+          pode fazer uma requisição POST com um corpo de dados no formato JSON:
+        </p>
+        <pre>
+{
+  "nome": "João",
+  "email": "joao@exemplo.com"
+}
+        </pre>
+        <p>
+          O Postman facilita muito esse tipo de interação, permitindo que
+          desenvolvedores e testadores realizem ações em APIs de maneira rápida
+          e eficaz.
+        </p>
+      </section>
+
       <section>
         <h2>Foto Astronômica do Dia</h2>
         <p>
