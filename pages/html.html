@@ -717,7 +717,7 @@
                 <button type="submit">Enviar</button>
             </form>
             
-            <!-- Respostas serão exibidas após o envio -->
+            <!-- Área onde as respostas serão exibidas após o envio -->
             <div id="respostas" style="display:none; margin-top: 20px;">
                 <h3>Respostas do Formulário:</h3>
                 <p><strong>Nome:</strong> <span id="respostaNome"></span></p>
@@ -735,7 +735,7 @@
                     &lt;title&gt;Formulários&lt;/title&gt;
                 &lt;/head&gt;
                 &lt;body&gt; 
-                &lt;form id=&quot;contactForm&quot; action=&quot;*&quot; method=&quot;post&quot; onsubmit=&quot;return validateForm()&quot;&gt;
+                &lt;form id=&quot;contactForm&quot; action=&quot;#&quot; method=&quot;post&quot; onsubmit=&quot;return validateForm(event)&quot;&gt;
                 &lt;label for=&quot;nome&quot;&gt;Nome:&lt;/label&gt;
                 &lt;input type=&quot;text&quot; id=&quot;nome&quot; name=&quot;nome&quot; required&gt;
                 &lt;span id=&quot;errorNome&quot; class=&quot;error&quot;&gt;&lt;/span&gt;
