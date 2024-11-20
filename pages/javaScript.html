@@ -33,18 +33,17 @@
           a seguir demonstra como exibir uma saudação ao clicar em um botão.
         </p>
         <pre>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const buttonSaudacao(document.getElementById('saudacao'));
-                    if(buttonSaudacao){
-                        buttonSaudacao.addEventLisntener('click', () => {
-                            const hours = new Date().getHours();
-                            const greetings = hours < 12 ? 'Bom dia' : hours < 18 ? 'Boa tarde' : 'Boa noite';
-                            alert(`${greetings}! Bem-vindo à Apostila Web!`);
-                        })
-                    }
-                })
-            </pre
-        >
+document.addEventListener('DOMContentLoaded', () => {
+    const buttonSaudacao = document.getElementById('saudacao');
+    if (buttonSaudacao) {
+        buttonSaudacao.addEventListener('click', () => {
+            const hours = new Date().getHours();
+            const greetings = hours < 12 ? 'Bom dia' : hours < 18 ? 'Boa tarde' : 'Boa noite';
+            alert(`${greetings}! Bem-vindo à Apostila Web!`);
+        });
+    }
+});
+        </pre>
         <p>
           Com Javascript podemos manipular a DOM de várias maneiras, nesse
           exemplo utilizamos a funcão getHours para recolher as horas do
@@ -98,19 +97,17 @@
           GitHub:
         </p>
         <pre>
-                document.addEventListener('DOMContentLoaded', () => {
-
-                    fetch('https://api.github.com/users/octocat')
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log(data);
-                        })
-                        .catch(error => {
-                            console.error('Erro ao carregar dados:', error);
-                        });
-                });
-            </pre
-        >
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://api.github.com/users/octocat')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Erro ao carregar dados:', error);
+        });
+});
+        </pre>
         <p>
           Este código utiliza o método `fetch` para realizar uma requisição GET
           à API do GitHub, que retorna informações sobre o usuário `octocat`. O
@@ -140,6 +137,7 @@
         <button onclick="fetchAPOD()">Mostrar APOD</button>
         <div id="apodContainer"></div>
       </section>
+
       <section id="dynamic-elements">
         <h2>Elementos Dinâmicos</h2>
         <p>
@@ -153,19 +151,194 @@
       </section>
       <h2>Código do exemplo de lista dinâmica</h2>
       <pre>
-        document.addEventListener('DOMContentLoaded', () => {
-        const addItemButton = document.getElementById('addItemButton');
-        const dynamicList = document.getElementById('dynamicList');
+document.addEventListener('DOMContentLoaded', () => {
+    const addItemButton = document.getElementById('addItemButton');
+    const dynamicList = document.getElementById('dynamicList');
 
-        if (addItemButton) {
-            addItemButton.addEventListener('click', () => {
+    if (addItemButton) {
+        addItemButton.addEventListener('click', () => {
             const newItem = document.createElement('li');
             newItem.textContent = `Item ${dynamicList.children.length + 1}`;
             dynamicList.appendChild(newItem);
-            });
-        }
-    });
+        });
+    }
+});
       </pre>
+
+      <!-- Variáveis -->
+      <section id="variables">
+        <h2>Variáveis</h2>
+        <p>
+          Variáveis são usadas para armazenar dados que podem ser reutilizados
+          ao longo do código. Em JavaScript, existem três palavras-chave
+          principais para declarar variáveis:
+        </p>
+        <ul>
+          <li>
+            <strong>var:</strong> Escopo global ou local (não recomendada).
+          </li>
+          <li><strong>let:</strong> Escopo de bloco.</li>
+          <li><strong>const:</strong> Não permite reatribuição.</li>
+        </ul>
+        <pre>
+const nome = 'João';
+let idade = 25;
+idade = 26;
+var profissao = 'Desenvolvedor';
+        </pre>
+      </section>
+
+      <!-- Tipos de Dados -->
+      <section id="data-types">
+        <h2>Tipos de Dados</h2>
+        <p>Em JavaScript, os principais tipos de dados são:</p>
+        <ul>
+          <li>
+            <strong>String:</strong> Texto delimitado por aspas
+            (<code>'texto'</code>, <code>"texto"</code>, ou
+            <code>`texto`</code>).
+          </li>
+          <li>
+            <strong>Number:</strong> Números inteiros ou decimais
+            (<code>42</code>, <code>3.14</code>).
+          </li>
+          <li>
+            <strong>Boolean:</strong> Verdadeiro ou falso (<code>true</code>,
+            <code>false</code>).
+          </li>
+          <li>
+            <strong>Array:</strong> Lista de valores (<code>[1, 2, 3]</code>).
+          </li>
+          <li>
+            <strong>Object:</strong> Coleção de pares chave-valor (<code
+              >{ chave: 'valor' }</code
+            >).
+          </li>
+          <li><strong>null:</strong> Valor vazio ou nulo.</li>
+          <li>
+            <strong>undefined:</strong> Variável declarada sem valor atribuído.
+          </li>
+        </ul>
+        <pre>
+const texto = "Olá, mundo!";
+const numero = 42;
+const verdadeiro = true;
+const lista = [1, 2, 3, 4];
+const objeto = { nome: "Ana", idade: 30 };
+        </pre>
+      </section>
+
+      <!-- Condicionais -->
+      <section id="conditionals">
+        <h2>Condicionais</h2>
+        <p>
+          Condicionais são usadas para executar diferentes blocos de código com
+          base em uma condição.
+        </p>
+        <pre>
+const hora = 14;
+
+if (hora < 12) {
+    console.log('Bom dia!');
+} else if (hora < 18) {
+    console.log('Boa tarde!');
+} else {
+    console.log('Boa noite!');
+}
+
+// Operador ternário
+const saudacao = hora < 12 ? 'Bom dia!' : 'Boa tarde ou noite!';
+console.log(saudacao);
+        </pre>
+      </section>
+
+      <!-- Loops -->
+      <section id="loops">
+        <h2>Loops</h2>
+        <p>Loops permitem executar um bloco de código repetidamente.</p>
+        <h3>Exemplo: loop <code>for</code></h3>
+        <pre>
+for (let i = 0; i < 5; i++) {
+    console.log(`Número: ${i}`);
+}
+        </pre>
+        <h3>Exemplo: loop <code>while</code></h3>
+        <pre>
+let contador = 0;
+while (contador < 5) {
+    console.log(`Contador: ${contador}`);
+    contador++;
+}
+        </pre>
+      </section>
+
+      <!-- Funções -->
+      <section id="functions">
+        <h2>Funções</h2>
+        <p>
+          Funções são blocos de código reutilizáveis. Elas podem receber
+          parâmetros e retornar valores.
+        </p>
+        <h3>Função tradicional</h3>
+        <pre>
+function saudacao(nome) {
+    return `Olá, ${nome}!`;
+}
+console.log(saudacao('Maria'));
+        </pre>
+        <h3>Arrow Function</h3>
+        <pre>
+const saudacao = nome => `Olá, ${nome}!`;
+console.log(saudacao('Carlos'));
+        </pre>
+      </section>
+
+      <!-- Manipulação da DOM -->
+      <section id="dom-manipulation">
+        <h2>Manipulação da DOM</h2>
+        <p>
+          A DOM (Document Object Model) representa a estrutura de uma página
+          web. Com JavaScript, podemos modificar elementos, estilos e eventos.
+        </p>
+        <h3>Exemplo de Modificação de Texto</h3>
+        <pre>
+document.addEventListener('DOMContentLoaded', () => {
+    const titulo = document.getElementById('titulo');
+    if (titulo) {
+        titulo.textContent = 'Título Alterado com JavaScript!';
+    }
+});
+        </pre>
+        <h3>Exemplo de Alteração de Estilos</h3>
+        <pre>
+document.addEventListener('DOMContentLoaded', () => {
+    const elemento = document.getElementById('estilo');
+    if (elemento) {
+        elemento.style.color = 'blue';
+        elemento.style.fontSize = '20px';
+    }
+});
+        </pre>
+      </section>
+
+      <!-- Eventos -->
+      <section id="events">
+        <h2>Eventos</h2>
+        <p>
+          Eventos permitem interatividade ao capturar ações do usuário, como
+          cliques ou teclas pressionadas.
+        </p>
+        <pre>
+document.addEventListener('DOMContentLoaded', () => {
+    const botao = document.getElementById('meuBotao');
+    if (botao) {
+        botao.addEventListener('click', () => {
+            alert('Botão clicado!');
+        });
+    }
+});
+        </pre>
+      </section>
     </main>
     <footer>
       <p>&copy; 2024 - Apostila Web</p>

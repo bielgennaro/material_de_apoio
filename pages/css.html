@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS</title>
-    <link rel="stylesheet" href="../styles/index.css">
-</head>
+    <link rel="stylesheet" href="../styles/index.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Apostila Web - Fundamentos de Desenvolvimento</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Introdução</a></li>
-                <li><a href="html.html">HTML</a></li>
-                <li><a href="css.html">CSS</a></li>
-                <li><a href="javaScript.html">JavaScript</a></li>
-            </ul>
-        </nav>
+      <h1>Apostila Web - Fundamentos de Desenvolvimento</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Introdução</a></li>
+          <li><a href="html.html">HTML</a></li>
+          <li><a href="css.html">CSS</a></li>
+          <li><a href="javaScript.html">JavaScript</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section id="css">
-            <h2>CSS - Folhas de Estilo em Cascata</h2>
-            <p>CSS (Cascading Style Sheets) é usado para estilizar páginas HTML, definindo cores, fontes, layouts e
-                muito mais.</p>
+      <section id="css">
+        <h2>CSS - Folhas de Estilo em Cascata</h2>
+        <p>
+          O CSS é a cereja do bolo em um site! Ele é responsável por transformar
+          uma página sem graça em algo visualmente atraente. Enquanto o HTML
+          organiza o conteúdo, o CSS define como tudo vai parecer: as cores, o
+          tamanho das fontes, os espaçamentos, e até animações.
+        </p>
 
-            <h3>Exemplo de CSS</h3>
-            <p>O exemplo abaixo mostra como estilizar o corpo da página e o cabeçalho:</p>
-            <pre>
+        <h3>Exemplo de CSS</h3>
+        <p>
+          O exemplo abaixo mostra como estilizar o corpo da página e o
+          cabeçalho:
+        </p>
+        <pre>
                 /* Estilizando o corpo da página */
                 body {
                     font-family: Arial, sans-serif; /* Define a fonte padrão */
@@ -43,13 +49,17 @@
                     padding: 10px; /* Espaçamento interno */
                     text-align: center; /* Centraliza o texto */
                 }
-            </pre>
-            <p>No exemplo acima, aplicamos um fundo escuro no cabeçalho com texto branco e removemos margens e padding
-                do corpo da página para ajustar o layout.</p>
+            </pre
+        >
+        <p>
+          No exemplo acima, aplicamos um fundo escuro no cabeçalho com texto
+          branco e removemos margens e padding do corpo da página para ajustar o
+          layout.
+        </p>
 
-            <h3>Exemplo de Media Query</h3>
-            <p>O exemplo abaixo altera o estilo do cabeçalho em telas menores:</p>
-            <pre>
+        <h3>Exemplo de Media Query</h3>
+        <p>O exemplo abaixo altera o estilo do cabeçalho em telas menores:</p>
+        <pre>
                 /* Media Query para telas menores */
                 @media (max-width: 600px) {
                     header {
@@ -57,13 +67,19 @@
                         padding: 5px; /* Diminui o espaçamento interno */
                     }
                 }
-            </pre>
-            <p>Esse código ajusta o tamanho do texto e o espaçamento do cabeçalho para telas pequenas, melhorando a
-                responsividade.</p>
+            </pre
+        >
+        <p>
+          Esse código ajusta o tamanho do texto e o espaçamento do cabeçalho
+          para telas pequenas, melhorando a responsividade.
+        </p>
 
-            <h3>Exemplo de Flexbox</h3>
-            <p>O exemplo abaixo demonstra o uso do Flexbox para criar um layout com elementos centralizados:</p>
-            <pre>
+        <h3>Exemplo de Flexbox</h3>
+        <p>
+          O exemplo abaixo demonstra o uso do Flexbox para criar um layout com
+          elementos centralizados:
+        </p>
+        <pre>
                 /* Layout com Flexbox */
                 .container {
                     display: flex; /* Ativa o modo flexbox */
@@ -77,13 +93,16 @@
                     padding: 20px; /* Espaçamento interno */
                     color: white; /* Cor do texto */
                 }
-            </pre>
-            <p>No exemplo acima, uma <code>div</code> com classe <code>container</code> é usada para centralizar um item
-                na tela.</p>
+            </pre
+        >
+        <p>
+          No exemplo acima, uma <code>div</code> com classe
+          <code>container</code> é usada para centralizar um item na tela.
+        </p>
 
-            <h3>Exemplo de Grid Layout</h3>
-            <p>O exemplo abaixo cria um layout de grade com três colunas:</p>
-            <pre>
+        <h3>Exemplo de Grid Layout</h3>
+        <p>O exemplo abaixo cria um layout de grade com três colunas:</p>
+        <pre>
                 /* Layout com Grid */
                 .grid-container {
                     display: grid; /* Ativa o Grid Layout */
@@ -97,16 +116,174 @@
                     padding: 20px; /* Espaçamento interno */
                     text-align: center; /* Centraliza o texto */
                 }
-            </pre>
-            <p>Esse exemplo cria uma grade com três colunas igualmente espaçadas, usando a propriedade
-                <code>grid-template-columns</code>.</p>
-        </section>
+            </pre
+        >
+        <p>
+          Esse exemplo cria uma grade com três colunas igualmente espaçadas,
+          usando a propriedade <code>grid-template-columns</code>.
+        </p>
+      </section>
+      <section id="css">
+        <h3>3 Formas de Linkar o CSS ao HTML</h3>
+        <ol>
+          <li>
+            <strong>CSS Externo:</strong> É o método mais recomendado. Você
+            coloca todo o CSS em um arquivo separado (geralmente com a extensão
+            <code>.css</code>) e o conecta ao HTML com a tag
+            <code>&lt;link&gt;</code>. Isso deixa seu código mais organizado e
+            facilita a manutenção.
+            <pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+                    </pre
+            >
+            <p>
+              <em>Quando usar?</em> Sempre que o CSS for usado em várias páginas
+              ou for grande o suficiente para justificar um arquivo separado.
+            </p>
+          </li>
+          <li>
+            <strong>CSS Interno:</strong> Se for algo específico para uma única
+            página ou uma estilização temporária, você pode usar a tag
+            <code>&lt;style&gt;</code> dentro do <code>&lt;head&gt;</code> do
+            HTML.
+            <pre>
+&lt;style&gt;
+    body {
+        background-color: lightblue;
+    }
+&lt;/style&gt;
+                    </pre
+            >
+            <p>
+              <em>Quando usar?</em> Para páginas simples ou testes rápidos de
+              estilo.
+            </p>
+          </li>
+          <li>
+            <strong>CSS Inline:</strong> Aqui o estilo é aplicado diretamente no
+            elemento HTML usando o atributo <code>style</code>. Embora funcione,
+            esse método deve ser evitado porque dificulta a manutenção.
+            <pre>
+&lt;h1 style="color: red; font-size: 24px;"&gt;Título Estilizado&lt;/h1&gt;
+                    </pre
+            >
+            <p>
+              <em>Quando usar?</em> Apenas em situações emergenciais ou quando
+              for algo extremamente pontual.
+            </p>
+          </li>
+        </ol>
+
+        <h3>Estilizando Elementos</h3>
+        <p>
+          Vamos começar com um exemplo básico: mudar o fundo da página, definir
+          a fonte e personalizar o cabeçalho.
+        </p>
+        <pre>
+body {
+    font-family: Arial, sans-serif; /* Escolhe uma fonte moderna e padrão */
+    margin: 0; /* Remove as margens automáticas */
+    padding: 0; /* Remove os espaçamentos automáticos */
+}
+
+header {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+            </pre
+        >
+        <p>
+          <strong>O que acontece?</strong> O site ganha uma aparência mais limpa
+          e moderna, com o cabeçalho em destaque e o fundo ajustado.
+        </p>
+
+        <h3>Media Queries: Estilo Responsivo</h3>
+        <p>
+          Sites modernos precisam funcionar bem em celulares, tablets e
+          computadores. Com o CSS, você pode criar regras específicas para cada
+          tamanho de tela usando <em>media queries</em>. Olha só:
+        </p>
+        <pre>
+@media (max-width: 600px) {
+    header {
+        font-size: 16px; /* Texto menor para caber na tela */
+        padding: 10px; /* Reduz o espaçamento */
+    }
+}
+            </pre
+        >
+        <p>
+          <strong>O que acontece?</strong> Em telas menores que 600px, o
+          cabeçalho se adapta, ficando mais compacto e fácil de visualizar.
+        </p>
+
+        <h3>Flexbox: Controle Absoluto de Layout</h3>
+        <p>
+          O Flexbox é uma ferramenta poderosa para organizar elementos na
+          página. Ele ajuda a centralizar, alinhar e distribuir os itens do
+          jeito que você quiser.
+        </p>
+        <pre>
+.container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Alinha os itens horizontalmente no centro */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    height: 100vh; /* Faz o container ocupar toda a altura da tela */
+}
+
+.item {
+    background-color: #4caf50; /* Fundo verde */
+    padding: 20px; /* Espaçamento interno */
+    color: white; /* Texto branco */
+}
+            </pre
+        >
+        <p>
+          <strong>O que acontece?</strong> O conteúdo fica centralizado tanto na
+          horizontal quanto na vertical. Ideal para criar designs simétricos e
+          limpos.
+        </p>
+
+        <h3>Grid Layout: Dividindo Espaços</h3>
+        <p>
+          O Grid é como uma tabela moderna, só que com muito mais controle.
+          Perfeito para criar layouts complexos, como galerias ou painéis.
+        </p>
+        <pre>
+.grid-container {
+    display: grid; /* Ativa o Grid Layout */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanhos iguais */
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+.grid-item {
+    background-color: #2196f3; /* Fundo azul */
+    color: white; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+            </pre
+        >
+        <p>
+          <strong>O que acontece?</strong> Você cria uma grade flexível com três
+          colunas, onde cada item é espaçado automaticamente. Ideal para
+          organizar elementos visualmente.
+        </p>
+
+        <h3>Resumo</h3>
+        <p>
+          Com o CSS, você tem o poder de transformar uma página simples em algo
+          bonito, responsivo e funcional. Ele é essencial para qualquer
+          desenvolvedor que queira criar interfaces de qualidade!
+        </p>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 - Apostila Web</p>
+      <p>&copy; 2024 - Apostila Web</p>
     </footer>
 
     <script src="../script/index.js"></script>
-</body>
-
+  </body>
 </html>

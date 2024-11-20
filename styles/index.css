@@ -227,7 +227,11 @@ table tr:hover {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
     header nav ul {
         flex-direction: column;
         gap: 10px;
@@ -257,13 +261,18 @@ table tr:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     body {
         font-size: 14px;
     }
 
+    header {
+        padding: 10px;
+    }
+
     header nav ul {
-        gap: 5px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     main {
