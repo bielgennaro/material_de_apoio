@@ -78,66 +78,85 @@ async function fetchAPOD() {
 	}
 }
 
-function validateForm() {
-	// Obter os campos do formulário
-	const nome = document.getElementById("nome").value.trim();
-	const email = document.getElementById("email").value.trim();
-	const assunto = document.getElementById("assunto").value;
-	const mensagem = document.getElementById("mensagem").value.trim();
+function validateForm(event) {
+    // Impede o envio do formulário
+    event.preventDefault();
 
-	// Elementos de erro
-	const errorNome = document.getElementById("errorNome");
-	const errorEmail = document.getElementById("errorEmail");
-	const errorAssunto = document.getElementById("errorAssunto");
-	const errorMensagem = document.getElementById("errorMensagem");
+    // Obter os campos do formulário
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const assunto = document.getElementById("assunto").value;
+    const mensagem = document.getElementById("mensagem").value.trim();
 
-	// Limpar mensagens de erro anteriores
-	errorNome.textContent = "";
-	errorEmail.textContent = "";
-	errorAssunto.textContent = "";
-	errorMensagem.textContent = "";
+    // Elementos de erro
+    const errorNome = document.getElementById("errorNome");
+    const errorEmail = document.getElementById("errorEmail");
+    const errorAssunto = document.getElementById("errorAssunto");
+    const errorMensagem = document.getElementById("errorMensagem");
 
-	// Flag para rastrear erros
-	let isValid = true;
+    // Limpar mensagens de erro anteriores
+    errorNome.textContent = "";
+    errorEmail.textContent = "";
+    errorAssunto.textContent = "";
+    errorMensagem.textContent = "";
 
-	// Validação do nome
-	if (!nome) {
-			errorNome.textContent = "O nome é obrigatório.";
-			isValid = false;
-	}
+    // Flag para rastrear erros
+    let isValid = true;
 
-	// Validação do email
-	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	if (!email) {
-			errorEmail.textContent = "O email é obrigatório.";
-			isValid = false;
-	} else if (!emailRegex.test(email)) {
-			errorEmail.textContent = "Digite um email válido.";
-			isValid = false;
-	}
+    // Validação do nome
+    if (!nome) {
+        errorNome.textContent = "O nome é obrigatório.";
+        isValid = false;
+    }
 
-	// Validação do assunto
-	if (!assunto) {
-			errorAssunto.textContent = "Selecione um assunto.";
-			isValid = false;
-	}
+    // Validação do email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+        errorEmail.textContent = "O email é obrigatório.";
+        isValid = false;
+    } else if (!emailRegex.test(email)) {
+        errorEmail.textContent = "Digite um email válido.";
+        isValid = false;
+    }
 
-	// Validação da mensagem
-	if (!mensagem) {
-			errorMensagem.textContent = "A mensagem é obrigatória.";
-			isValid = false;
-	}
+    // Validação do assunto
+    if (!assunto) {
+        errorAssunto.textContent = "Selecione um assunto.";
+        isValid = false;
+    }
 
-	// Mostrar alert de acordo com a validação
-	if (isValid) {
-			alert("Formulário enviado com sucesso!");
-	} else {
-			alert("Por favor, corrija os erros antes de enviar o formulário.");
-	}
+    // Validação da mensagem
+    if (!mensagem) {
+        errorMensagem.textContent = "A mensagem é obrigatória.";
+        isValid = false;
+    }
 
-	// Retornar false para impedir o envio se houver erros
-	return isValid;
+    // Se for válido, mostrar o alert de sucesso
+    if (isValid) {
+        alert("Formulário enviado com sucesso!");
+
+        // Mostrar as respostas após o alert (quando o usuário clicar em "OK")
+        setTimeout(function() {
+            // Atualizar os valores exibidos
+            document.getElementById('respostaNome').textContent = nome;
+            document.getElementById('respostaEmail').textContent = email;
+            document.getElementById('respostaAssunto').textContent = assunto;
+            document.getElementById('respostaMensagem').textContent = mensagem;
+
+            // Mostrar a div com as respostas
+            document.getElementById('respostas').style.display = 'block';
+
+            // Limpar o formulário
+            document.getElementById('contactForm').reset();
+        }, 100);  // O setTimeout ajuda a garantir que as respostas apareçam após o alert
+    } else {
+        alert("Por favor, corrija os erros antes de enviar o formulário.");
+    }
+
+    // Retornar false para impedir o envio se houver erros
+    return false;
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const addItemButton = document.getElementById('addItemButton');

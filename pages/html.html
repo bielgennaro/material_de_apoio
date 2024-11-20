@@ -692,15 +692,15 @@
                     recebera as informações do formulário.</li>
             </ul>
             <p>Abaixo está um exemplo de formulário de contato:</p>
-            <form id="contactForm" action="*" method="post" onsubmit="return validateForm()">
+            <form id="contactForm" action="#" method="post" onsubmit="return validateForm(event)">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
                 <span id="errorNome" class="error"></span>
-
+            
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <span id="errorEmail" class="error"></span>
-
+            
                 <label for="assunto">Assunto:</label>
                 <select id="assunto" name="assunto" required>
                     <option value="">Selecione um assunto</option>
@@ -709,13 +709,23 @@
                     <option value="reclamacao">Reclamação</option>
                 </select>
                 <span id="errorAssunto" class="error"></span>
-
+            
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
                 <span id="errorMensagem" class="error"></span>
-
+            
                 <button type="submit">Enviar</button>
             </form>
+            
+            <!-- Respostas serão exibidas após o envio -->
+            <div id="respostas" style="display:none; margin-top: 20px;">
+                <h3>Respostas do Formulário:</h3>
+                <p><strong>Nome:</strong> <span id="respostaNome"></span></p>
+                <p><strong>Email:</strong> <span id="respostaEmail"></span></p>
+                <p><strong>Assunto:</strong> <span id="respostaAssunto"></span></p>
+                <p><strong>Mensagem:</strong> <span id="respostaMensagem"></span></p>
+            </div>
+            
             <p><strong>Assim seria o código para criar esse conteúdo:</strong></p>
             <pre>
             &lt;!DOCTYPE html&gt;
