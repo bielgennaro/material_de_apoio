@@ -30,11 +30,6 @@ Proporcionar uma introdução prática e acessível às principais tecnologias u
 4. **Introdução ao JavaScript**  
    Manipulação de DOM, eventos e lógica básica.
 
-## COMING SOON
-6. **Versionamento de Código**  
-   Introdução ao Git e ao GitHub, incluindo como publicar projetos no GitHub Pages.
-
-## COMING SOON
 ## 🚀 Publicação
 A apostila está disponível online no **GitHub Pages** para facilitar o acesso e estudo.  
 Acesse [aqui](https://bielgennaro.github.io/material_de_apoio) para visualizar.
